@@ -1,3 +1,4 @@
+import React from 'react';
 import {Client as Styletron} from 'styletron-engine-atomic';
 import {Provider as StyletronProvider} from 'styletron-react';
 import {LightTheme, BaseProvider, useStyletron, styled} from 'baseui';
@@ -8,7 +9,8 @@ const engine = new Styletron();
 
 const Container = styled('div', {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingBottom: '25px'
 });
 
 function BaseWebApp() {

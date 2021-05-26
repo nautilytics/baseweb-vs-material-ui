@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({ // you can access theme here
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
+        paddingBottom: '25px'
     },
     button: {
         color: 'red'

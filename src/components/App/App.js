@@ -3,6 +3,7 @@ import {makeStyles} from "@material-ui/core";
 import BaseWebApp from "../BaseWebApp";
 import MaterialUIApp from "../MaterialUIApp";
 import {styled} from "baseui";
+import SemanticUIApp from "../SemanticUIApp";
 
 // Example of @material-ui/styles CSS-in-JS  [see developer console for debugging analysis]
 const useStyles = makeStyles(() => ({
@@ -29,6 +30,7 @@ function App() {
             <Centered>
                 <BaseWebApp/>
                 <MaterialUIApp/>
+                <SemanticUIApp/>
             </Centered>
         </div>
     );
