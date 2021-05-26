@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import {Link, makeStyles} from "@material-ui/core";
+import {BrandPrimary100} from '../../style-dictionary-dist/variables'
 
 const useStyles = makeStyles((theme) => ({ // you can access theme here
     container: {
@@ -10,7 +11,7 @@ const useStyles = makeStyles((theme) => ({ // you can access theme here
         paddingBottom: '25px'
     },
     button: {
-        color: 'red'
+        color: BrandPrimary100
     }
 }));
 

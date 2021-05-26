@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 26 May 2021 22:03:20 GMT
+ * Generated on Wed, 26 May 2021 22:08:46 GMT
  */
 
 export const BrandPrimary100 = "#db3a22";

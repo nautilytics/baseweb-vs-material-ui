@@ -3,7 +3,8 @@ import {Client as Styletron} from 'styletron-engine-atomic';
 import {Provider as StyletronProvider} from 'styletron-react';
 import {LightTheme, BaseProvider, useStyletron, styled} from 'baseui';
 import {Button} from "baseui/button";
-import {StyledLink} from 'baseui/link'
+import {StyledLink} from 'baseui/link';
+import {BrandPrimary100} from '../../style-dictionary-dist/variables'
 
 const engine = new Styletron();
 
@@ -24,7 +25,7 @@ function BaseWebApp() {
                     <Button overrides={{
                         Root: {
                             style: {
-                                color: 'red'
+                                color: BrandPrimary100
                             }
                         }
                     }}>
