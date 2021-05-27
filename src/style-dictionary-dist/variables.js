@@ -1,9 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Wed, 26 May 2021 22:08:46 GMT
+ * Generated on Thu, 27 May 2021 21:54:28 GMT
  */
 
-export const BrandPrimary100 = "#db3a22";
+export const  mBrandPrimary100 = "#db3a22";
 export const BrandSecondary1 = "#072448";
 export const BrandSecondary2 = "#0298c7";
 export const BrandSecondary3 = "#ffcb00";

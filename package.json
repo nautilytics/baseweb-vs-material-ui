@@ -18,7 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "style-dictionary-build": "node_modules/style-dictionary/bin/style-dictionary build"
+    "get-tokens": "curl https://premise.zeroheight.com/api/token_file/1252c6d6c488/share -o tokens/token.json",
+    "style-dictionary-build": "npm run get-tokens && node_modules/style-dictionary/bin/style-dictionary build --config ./sd.config.js"
   },
   "eslintConfig": {
     "extends": [
