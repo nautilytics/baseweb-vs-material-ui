@@ -1,9 +1,9 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/core";
-import BaseWebApp from "../BaseWebApp";
 import MaterialUIApp from "../MaterialUIApp";
 import {styled} from "baseui";
 import SemanticUIApp from "../SemanticUIApp";
+import BaseWebAppContainer from "../BaseWebAppContainer";
 
 // Example of @material-ui/styles CSS-in-JS  [see developer console for debugging analysis]
 const useStyles = makeStyles(() => ({
@@ -28,7 +28,7 @@ function App() {
     return (
         <div className={classes.container}>
             <Centered>
-                <BaseWebApp/>
+                <BaseWebAppContainer/>
                 <MaterialUIApp/>
                 <SemanticUIApp/>
             </Centered>

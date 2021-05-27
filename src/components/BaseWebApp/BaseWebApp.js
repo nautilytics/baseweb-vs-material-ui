@@ -1,12 +1,7 @@
 import React from 'react';
-import {Client as Styletron} from 'styletron-engine-atomic';
-import {Provider as StyletronProvider} from 'styletron-react';
-import {LightTheme, BaseProvider, useStyletron, styled} from 'baseui';
+import {useStyletron, styled} from 'baseui';
 import {Button} from "baseui/button";
 import {StyledLink} from 'baseui/link';
-import {BrandPrimary100} from '../../style-dictionary-dist/variables'
-
-const engine = new Styletron();
 
 const Container = styled('div', {
     display: 'flex',
@@ -18,26 +13,24 @@ function BaseWebApp() {
     const [, theme] = useStyletron(); // if you want to use theme variables
 
     return (
-        <StyletronProvider value={engine}>
-            <BaseProvider theme={LightTheme}>
-                <h2>BaseWeb</h2>
-                <Container>
-                    <Button overrides={{
-                        Root: {
-                            style: {
-                                color: BrandPrimary100
-                            }
+        <>
+            <h2>BaseWeb</h2>
+            <Container>
+                <Button overrides={{
+                    Root: {
+                        style: {
+                            color: theme.colors.accent
                         }
-                    }}>
-                        Hello World
-                    </Button>
-                    <Button kind="secondary">
-                        Hello World
-                    </Button>
-                    <StyledLink>Link to something</StyledLink>
-                </Container>
-            </BaseProvider>
-        </StyletronProvider>
+                    }
+                }}>
+                    Hello World
+                </Button>
+                <Button kind="secondary">
+                    Hello World
+                </Button>
+                <StyledLink>Link to something</StyledLink>
+            </Container>
+        </>
     );
 }
 
