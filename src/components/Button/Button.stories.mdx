@@ -1,0 +1,43 @@
+import {Meta, Story, Canvas} from '@storybook/addon-docs/blocks';
+import styled from 'styled-components';
+import Button, {PrimaryButton} from './';
+
+export const Container = styled.div`
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+`;
+
+export const Cell = styled.div`
+    border: 1px solid black;
+    padding: 9px;
+    border-collapse: collapse;
+`;
+
+export const Description = styled.div`
+    margin-left: 3px;
+`;
+
+<Meta title="Components/Buttons" component={Button}/>
+
+# Buttons
+
+<Canvas>
+    <Story name="Buttons">
+        <Container>
+            <Cell>Component</Cell>
+            <Cell>When to use</Cell>
+            <Cell>
+                <Button>I am a Normal Button</Button>
+            </Cell>
+            <Cell>Ready for every occasion</Cell>
+            <Cell>
+                <PrimaryButton>I am a Primary Button</PrimaryButton>
+            </Cell>
+            <Cell>
+                Mostly in forms or when there is more than one action to perform.
+                This button represent the Primary action.
+            </Cell>
+        </Container>
+    </Story>
+</Canvas>
