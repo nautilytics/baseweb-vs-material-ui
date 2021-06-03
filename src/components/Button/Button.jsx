@@ -36,7 +36,7 @@ export const Button = styled.button`
 `;
 
 export const PrimaryButton = styled(Button)`
-  background: darkblue;
+  background: purple;
   color: #ffffff;
 
   &:hover {
