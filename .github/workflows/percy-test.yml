@@ -1,9 +1,6 @@
-name: Storybook Sandbox to GitHub Pages
+name: Percy Test for Storybook
 
-on:
-  push:
-    branches:
-      - main
+on: [pull_request]
 
 jobs:
   cancel_previous_job:
@@ -14,7 +11,7 @@ jobs:
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
 
-  build:
+  percy:
     runs-on: ubuntu-latest
     env:
       CI: false
@@ -41,13 +38,7 @@ jobs:
         run: |
           yarn install --prefer-offline
 
-      - name: Build Storybook 📚
-        run: |
-          yarn run build-storybook
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: storybook-static
+      - name: Percy Test
+        uses: percy/storybook-action@v0.1.6
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
