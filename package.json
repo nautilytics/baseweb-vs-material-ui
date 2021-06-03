@@ -10,6 +10,7 @@
     "react-scripts": "4.0.3",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.3",
+    "styled-components": "^5.3.0",
     "styletron-engine-atomic": "^1.4.8",
     "styletron-react": "^6.0.1"
   },
@@ -19,6 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "get-tokens": "curl https://premise.zeroheight.com/api/token_file/1252c6d6c488/share -o tokens/token.json",
+    "snapshot": "PERCY_TOKEN=$(grep PERCY_TOKEN .env | cut -d '=' -f2) build-storybook && percy-storybook --widths=320,1280",
+    "storybook": "start-storybook -p 6006",
     "style-dictionary-build": "npm run get-tokens && node_modules/style-dictionary/bin/style-dictionary build --config ./sd.config.js"
   },
   "eslintConfig": {
@@ -40,6 +43,12 @@
     ]
   },
   "devDependencies": {
+    "@percy/storybook": "^3.3.1",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-docs": "^6.2.9",
+    "@storybook/addon-knobs": "^6.2.9",
+    "@storybook/addons": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "style-dictionary": "^3.0.0"
   }
 }
